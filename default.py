@@ -2,10 +2,9 @@ import sys, xbmc, xbmcgui, xbmcplugin, urllib, urllib2, urlparse, re, string, os
 import simplejson as json
 
 
-# GadgetReactor
-# http://www.gadgetreactor.com/portfolio/sgtv
+# merlion - repo - plugin.video.sporetv
 
-__addon__	      = xbmcaddon.Addon('plugin.video.sgtv')
+__addon__	      = xbmcaddon.Addon('plugin.video.sporetv')
 __addonname__ = __addon__.getAddonInfo('name')
 __language__  = __addon__.getLocalizedString
 __thumbpath__ = os.path.join( __addon__.getAddonInfo( 'path' ), 'resources', 'media')
