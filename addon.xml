@@ -1,18 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.video.sporetv"
-version="0.1.3"
-name="Singapore TV Kodi Video Plugin"
-provider-name="mamborambo">
+  version="0.1.3"
+  name="Singapore TV"
+  provider-name="mamborambo">
+
 <requires>
   <import addon="xbmc.python" version="2.24.0"/>
+  <import addon="script.module.simplejson" version="2.0.10" />
+  <import addon="plugin.video.youtube" version="4.4.10" />
+  <import addon="script.module.pyamf" version="0.6.2"/>
 </requires>
-<extension point="xbmc.python.pluginsource" library="main.py">
+
+<extension point="xbmc.python.pluginsource" library="default.py" olib="main.py">
   <provides>video</provides>
 </extension>
+
 <extension point="xbmc.addon.metadata">
   <summary lang="en">Singapore experimental Kodi Video Plugin</summary>
+  <platform>all</platform>
   <description lang="en">Lets see if you can stream from SG.</description>
   <disclaimer lang="en">Some vids from toggle.com, others from OTA antennas.</disclaimer>
+  <source>https://github.com/kaceo/plugin.video.sporetv</source>
+
   <assets>
     <icon>icon.png</icon>
     <fanart>fanart.jpg</fanart>
@@ -22,4 +31,5 @@ provider-name="mamborambo">
   </assets>
   <news>Updated with latest artwork metadata</news>
 </extension>
+
 </addon>
