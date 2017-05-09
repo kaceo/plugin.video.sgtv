@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Module: default
-# Author: Roman V. M.
-# Created on: 28.11.2014
+# Author: mamborambo
+# Created on: 28.4.2017
 # License: GPL v.3 https://www.gnu.org/copyleft/gpl.html
 
 import sys
@@ -13,51 +13,51 @@ import xbmcplugin
 # Get the plugin url in plugin:// notation.
 _url = sys.argv[0]
 # Get the plugin handle as an integer number.
+
 _handle = int(sys.argv[1])
 
-# Free sample videos are provided by www.vidsplay.com
-# Here we use a fixed set of properties simply for demonstrating purposes
-# In a "real life" plugin you will need to get info and links to video files/streams
-# from some web-site or online service.
-VIDEOS = {'Animals': [{'name': 'Crab',
-                       'thumb': 'http://www.vidsplay.com/vids/crab.jpg',
-                       'video': 'http://www.vidsplay.com/vids/crab.mp4',
-                       'genre': 'Animals'},
-                      {'name': 'Alligator',
-                       'thumb': 'http://www.vidsplay.com/vids/alligator.jpg',
-                       'video': 'http://www.vidsplay.com/vids/alligator.mp4',
-                       'genre': 'Animals'},
-                      {'name': 'Turtle',
-                       'thumb': 'http://www.vidsplay.com/vids/turtle.jpg',
-                       'video': 'http://www.vidsplay.com/vids/turtle.mp4',
-                       'genre': 'Animals'}
-                      ],
-            'Cars': [{'name': 'Postal Truck',
-                      'thumb': 'http://www.vidsplay.com/vids/us_postal.jpg',
-                      'video': 'http://www.vidsplay.com/vids/us_postal.mp4',
-                      'genre': 'Cars'},
-                     {'name': 'Traffic',
-                      'thumb': 'http://www.vidsplay.com/vids/traffic1.jpg',
-                      'video': 'http://www.vidsplay.com/vids/traffic1.avi',
-                      'genre': 'Cars'},
-                     {'name': 'Traffic Arrows',
-                      'thumb': 'http://www.vidsplay.com/vids/traffic_arrows.jpg',
-                      'video': 'http://www.vidsplay.com/vids/traffic_arrows.mp4',
-                      'genre': 'Cars'}
-                     ],
-            'Food': [{'name': 'Chicken',
-                      'thumb': 'http://www.vidsplay.com/vids/chicken.jpg',
-                      'video': 'http://www.vidsplay.com/vids/bbqchicken.mp4',
-                      'genre': 'Food'},
-                     {'name': 'Hamburger',
-                      'thumb': 'http://www.vidsplay.com/vids/hamburger.jpg',
-                      'video': 'http://www.vidsplay.com/vids/hamburger.mp4',
-                      'genre': 'Food'},
-                     {'name': 'Pizza',
-                      'thumb': 'http://www.vidsplay.com/vids/pizza.jpg',
-                      'video': 'http://www.vidsplay.com/vids/pizza.mp4',
-                      'genre': 'Food'}
-                     ]}
+VIDEOS = {'Live English': [
+            {'name': 'Channel 5 Mediacorp',
+             'thumb': 'http://www.vidsplay.com/vids/crab.jpg',
+             'video': 'http://www.vidsplay.com/vids/crab.mp4',
+             'genre': 'Animals'},
+            {'name': 'Channel News Asia Mediacorp',
+             'thumb': 'http://www.vidsplay.com/vids/alligator.jpg',
+             'video': 'http://www.vidsplay.com/vids/alligator.mp4',
+             'genre': 'Animals'},
+            {'name': 'Okto Mediacorp',
+             'thumb': 'http://www.vidsplay.com/vids/turtle.jpg',
+             'video': 'http://www.vidsplay.com/vids/turtle.mp4',
+             'genre': 'Animals'}
+          ],
+          'Live Chinese': [
+            {'name': 'Channel 8 Mediacorp',
+             'thumb': 'http://www.vidsplay.com/vids/us_postal.jpg',
+             'video': 'http://www.vidsplay.com/vids/us_postal.mp4',
+             'genre': 'Cars'},
+            {'name': 'Channel U Mediacorp',
+             'thumb': 'http://www.vidsplay.com/vids/traffic1.jpg',
+             'video': 'http://www.vidsplay.com/vids/traffic1.avi',
+             'genre': 'Cars'},
+            {'name': 'Something More',
+             'thumb': 'http://www.vidsplay.com/vids/traffic_arrows.jpg',
+             'video': 'http://www.vidsplay.com/vids/traffic_arrows.mp4',
+             'genre': 'Cars'}
+          ],
+          'Unclassified': [
+            {'name': 'Webcam',
+             'thumb': 'http://www.vidsplay.com/vids/chicken.jpg',
+             'video': 'http://www.vidsplay.com/vids/bbqchicken.mp4',
+             'genre': 'Food'},
+            {'name': 'Snapcam',
+             'thumb': 'http://www.vidsplay.com/vids/hamburger.jpg',
+             'video': 'http://www.vidsplay.com/vids/hamburger.mp4',
+             'genre': 'Food'},
+            {'name': 'Zapcam',
+             'thumb': 'http://www.vidsplay.com/vids/pizza.jpg',
+             'video': 'http://www.vidsplay.com/vids/pizza.mp4',
+             'genre': 'Food'}
+          ]}
 
 
 def get_url(**kwargs):
